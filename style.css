@@ -8,7 +8,7 @@
           
 }
 
-.header-bg{
+.header__bg{
           background-image: linear-gradient(90deg, #5e5c5cde 0%, #9dc5c3d0 41%, transparent 40%) ,url(./pics/header.jpg) ;
           background-size: cover;
           height: 100vh;
@@ -57,29 +57,34 @@
          width: 40%;
          height: 78vh; 
          display: grid;
-         grid-template-columns: repeat(6,1fr);
-         grid-template-rows: repeat(6 ,1fr);
+         grid-template-columns: repeat(10,1fr);
+         grid-template-rows: repeat(10 ,1fr);
 }
-.text-header{
-         grid-column: 2/6;
+.header__text{
+         grid-column: 2/10;
          grid-row: 2/3;
          align-self: center;
          font-family: sans-serif;
          color: aliceblue;
          font-size: 1.9rem;
+         padding-bottom: 3rem;
+         color: #b8fefb;
+
 }
 
-.text-paragraph{
-          grid-column: 2/6;
+.text__p{
+          grid-column: 2/8;
           grid-row: 3/4;
           font-family: sans-serif;
           color: aliceblue;
-          font-weight: 600
+          font-weight: 500;
+          line-height: 1.4;
+          padding-bottom: 3rem;
 
 }
 
 .btn {
-          grid-column: 2/4;
+          grid-column: 2/8;
           grid-row: 4/5;
           align-self: end;
           font-family: sans-serif;
@@ -96,3 +101,54 @@
 
 .btn:hover {
           background-color: #006e69;
+}
+
+
+@media (max-width:1080px) {
+  .header__bg{
+    background-image: linear-gradient(90deg, #5e5c5cde 0%, #9dc5c3d0 50%, transparent 40%) ,url(./pics/header.jpg) ;
+    background-size: cover;
+    height: 100vh;
+  }
+
+  .header__text{
+    grid-column: 2/10;
+    grid-row: 2/3;
+    align-self: center;
+    font-family: sans-serif;
+    color: #b8fefb;   
+    font-size: 2rem;
+    padding-bottom: 3rem;
+    padding-top: 3rem;
+
+    
+}
+
+.text__p{
+  grid-column: 2/10;
+  grid-row: 3/10;
+  font-family: sans-serif;
+  color: aliceblue;
+  font-weight: 500;
+  line-height: 1.4;
+
+}
+
+.btn {
+  grid-column: 2/10;
+  grid-row: 9/10;
+  align-self: end;
+  font-family: sans-serif;
+  background-color: rgb(71, 158, 158);
+  border: none;
+  border-radius: 0.2rem;
+  padding: 0.5rem;
+  color: aliceblue;
+  font-weight: 600;
+  font-size: 1rem;
+  margin-top: 18rem;
+  
+
+}
+
+}
